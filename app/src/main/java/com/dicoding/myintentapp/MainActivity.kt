@@ -11,15 +11,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnMoveActivity: Button = findViewById(R.id.BtnMoveAct)
-        btnMoveActivity.setOnClickListener(this)
+        val BtnMoveActivities: Button = findViewById(R.id.BtnMoveAct)
+        BtnMoveActivities.setOnClickListener(this)
+
+        val BtnMoveWithData: Button = findViewById(R.id.BtnMvData)
+        BtnMoveWithData.setOnCLickListener(this)
     }
 
-    override fun onClick(v: View?) {
-        when(v?.id){
+    override fun onClick(p0: View?){
+        when(p0?.id){
             R.id.BtnMoveAct -> {
-                val moveIntent = Intent(this@MainActivity, MoveActivity::class.java)
+                val moveIntent = Intent(this@MainActivity,MoveActivity::class.java)
                 startActivity(moveIntent)
+            }
+            R.id.BtnMvData -> {
+                val moveWithData = Intent
             }
         }
     }
