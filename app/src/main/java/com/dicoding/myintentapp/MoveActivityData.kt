@@ -15,6 +15,8 @@ class MoveActivityData : AppCompatActivity() {
         setContentView(R.layout.activity_move_data)
 
         val tvDataReceived: TextView = findViewById(R.id.tvMoveAct)
+        val name = intent.getStringExtra(EXTRA_NAME)
+        val age = intent.getIntExtra(EXTRA_AGE, 0)
     }
 
 
